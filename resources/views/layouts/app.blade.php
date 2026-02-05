@@ -6,6 +6,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="wpOceans">
+        <!-- SEO + Share Meta -->
+<meta property="og:title" content="Kandhasivanayagam ❤️ Priyanka Wedding" />
+<meta property="og:description" content="Join us to celebrate the wedding of Kandhasivanayagam and Priyanka. Save the date and be part of our beautiful journey." />
+<meta property="og:image" content="{{ asset('assets/images/share.png') }}" />
+<meta property="og:url" content="{{ url()->current() }}" />
+<meta property="og:type" content="website" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kandhasivanayagam ❤️ Priyanka Wedding">
+<meta name="twitter:description" content="Join us to celebrate the wedding of Kandhasivanayagam and Priyanka. Save the date and be part of our beautiful journey.">
+<meta name="twitter:image" content="{{ asset('assets/images/share.png') }}">
+
         <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}">
         <title>@yield('title', 'Sukun - Wedding & Wedding Planner HTML5 Template')</title>
 
