@@ -19,7 +19,7 @@
 <meta name="twitter:image" content="{{ asset('assets/images/share.png') }}">
 
         <link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/favicon.png') }}">
-        <title>@yield('title', 'Sukun - Wedding & Wedding Planner HTML5 Template')</title>
+        <title>@yield('title', 'Kandhasivanayagam ❤️ Priyanka Wedding')</title>
 
         <!-- Styles -->
         <link href="{{ asset('assets/css/themify-icons.css') }}" rel="stylesheet">

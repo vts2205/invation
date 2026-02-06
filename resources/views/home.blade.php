@@ -1,13 +1,25 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- start preloader -->
-    @include('partials.preloader')
-    <!-- end preloader -->
+    <!-- Website Intro Screen -->
+    <div id="intro-screen" class="intro-screen">
+        <div class="intro-background"></div>
+        <div class="intro-content">
+            <button id="enter-button" class="enter-button">
+                <span>Enter</span>
+            </button>
+        </div>
+    </div>
 
-    <!-- Start header -->
-    @include('partials.header', ['HeaderStyle' => 'wpo-header-style-1'])
-    <!-- end of header -->
+    <!-- Main Website Content (initially hidden) -->
+    <div id="main-content" class="main-content-hidden">
+        <!-- start preloader -->
+        @include('partials.preloader')
+        <!-- end preloader -->
+
+        <!-- Start header -->
+        @include('partials.header', ['HeaderStyle' => 'wpo-header-style-1'])
+        <!-- end of header -->
 
     <!-- start of hero -->
     <section class="static-hero">
@@ -30,7 +42,7 @@
                         <div class="col col-xl-6 col-lg-6 col-12">
                             <div class="wpo-static-hero-text-box">
                                 <div class="slide-title">
-                                    <h2 class="poort-text poort-in-up">Siva <br>&<br> Priya</h2>
+                                    <h2 class="poort-text poort-in-up">Shiva <br>&<br> Priya</h2>
                                 </div>
                                 <div class="slide-text wow fadeInUp" data-wow-duration="1600ms">
                                     <p>We Are Getting Married In </p>
@@ -73,7 +85,7 @@
                         <div class="col col-md-6 col-12">
                             <div class="couple-item">
                                 <div class="couple-img">
-                                    <img src="{{ asset('assets/images/couple/couple-img-1.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/about/girl.jpg') }}" alt="">
                                 </div>
                                 <div class="couple-text">
                                     <i><img src="{{ asset('assets/images/couple/bride.svg') }}" alt=""></i>
@@ -97,7 +109,7 @@
                         <div class="col col-md-6 col-12">
                             <div class="couple-item">
                                 <div class="couple-img">
-                                    <img src="{{ asset('assets/images/couple/couple-img-2.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/about/boy.jpg') }}" alt="">
                                 </div>
                                 <div class="couple-text">
                                     <i><img src="{{ asset('assets/images/couple/groom.svg') }}" alt=""></i>
@@ -138,7 +150,7 @@
                     <div class="row">
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-img">
-                                <img src="{{ asset('assets/images/story/story-1.jpg') }}" alt="">
+                                <img src="{{ asset('assets/images/about/meet.jpg') }}" alt="">
                             </div>
                         </div>
                         <div class="col col-lg-6 col-12">
@@ -165,7 +177,7 @@
                     <div class="row">
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-img">
-                                <img src="{{ asset('assets/images/story/story-2.jpg') }}" alt="">
+                                <img src="{{ asset('assets/images/about/meeting.jpg') }}" alt="">
                             </div>
                         </div>
                         <div class="col col-lg-6 col-12">
@@ -190,7 +202,7 @@
                     <div class="row">
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-img">
-                                <img src="{{ asset('assets/images/story/story-3.jpg') }}" alt="">
+                                <img src="{{ asset('assets/images/about/function.jpg') }}" alt="">
                             </div>
                         </div>
                         <div class="col col-lg-6 col-12">
@@ -353,7 +365,7 @@
             </div>
             <div class="wpo-event-main">
                 <div class="event-description">
-                    <p>Friday 06, March. 2026, 6.00 PM – 7.00 PM</p>
+                    <p>Friday 06, March. 2026, 6.00 AM – 7.00 AM</p>
                     <p>Venue: Jenneys Residency,Avinashi Road,Coimbatore</p>
                 </div>
                 <div class="wpo-event-wrap">
@@ -397,7 +409,7 @@
                                 <span>Welcome Drinks Coffee</span>
                             </div>
                             <div class="wpo-event-time">
-                                <h4>4.30 PM</h4>
+                                <h4>4.30 AM</h4>
                                 <i class="fa fa-heart"></i>
                             </div>
                         </div>
@@ -408,7 +420,7 @@
                                 <span>Engagement </span>
                             </div>
                             <div class="wpo-event-time">
-                                <h4>5.00 PM</h4>
+                                <h4>5.00 AM</h4>
                                 <i class="fa fa-heart"></i>
                             </div>
                         </div>
@@ -418,7 +430,7 @@
                                 <span>Marriage </span>
                             </div>
                             <div class="wpo-event-time">
-                                <h4>6.00 PM</h4>
+                                <h4>6.00 AM</h4>
                                 <i class="fa fa-heart"></i>
                             </div>
                         </div>
@@ -428,7 +440,7 @@
                                 <span>Marriage Photo  </span>
                             </div>
                             <div class="wpo-event-time">
-                                <h4>7.00 PM</h4>
+                                <h4>7.00 AM</h4>
                                 <i class="fa fa-heart"></i>
                             </div>
                         </div>
@@ -450,4 +462,162 @@
     <!-- start of wpo-site-footer-section -->
     @include('partials.footer', ['FooterStyle' => 'wpo-site-footer'])
     <!-- end of wpo-site-footer-section -->
+    </div>
+    <!-- End Main Website Content -->
+
+@push('styles')
+<style>
+    /* Intro Screen Styles */
+    .intro-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .intro-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('{{ asset("assets/images/slider/img-1.png") }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .intro-screen.fade-out .intro-background {
+        opacity: 0;
+        transform: scale(1.15);
+    }
+
+    .intro-content {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .enter-button {
+        background: rgba(255, 255, 255, 0.95);
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        color: #9F7B59;
+        padding: 18px 50px;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(10px);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .enter-button::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(159, 123, 89, 0.1);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s ease, height 0.6s ease;
+    }
+
+    .enter-button:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        border-color: rgba(255, 255, 255, 1);
+    }
+
+    .enter-button:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .enter-button:active {
+        transform: translateY(-1px);
+    }
+
+    .enter-button span {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Main Content Styles */
+    .main-content-hidden {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .main-content-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Hide intro screen after animation */
+    .intro-screen.hidden {
+        display: none;
+    }
+
+    /* Prevent scrolling when intro screen is visible */
+    body.intro-active {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    /* Smooth transitions */
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+</style>
+@endpush
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const introScreen = document.getElementById('intro-screen');
+        const enterButton = document.getElementById('enter-button');
+        const mainContent = document.getElementById('main-content');
+        const body = document.body;
+
+        // Add class to body to prevent scrolling
+        if (introScreen) {
+            body.classList.add('intro-active');
+        }
+
+        if (enterButton && introScreen && mainContent) {
+            enterButton.addEventListener('click', function() {
+                // Add fade-out class to intro screen
+                introScreen.classList.add('fade-out');
+
+                // After intro animation completes, hide intro and show main content
+                setTimeout(function() {
+                    introScreen.classList.add('hidden');
+                    body.classList.remove('intro-active');
+                    mainContent.classList.remove('main-content-hidden');
+                    mainContent.classList.add('main-content-visible');
+                }, 1200); // Match the CSS transition duration
+            });
+        }
+    });
+</script>
+@endpush
 @endsection

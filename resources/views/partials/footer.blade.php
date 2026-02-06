@@ -14,6 +14,7 @@
                         </div>
                         <p>We can’t wait to see all of our beloved friends
                             and relative s at our wedding.</p>
+                            <h3 style="margin-top: 20px;">Celebrate With Us Here</h3>
                         <ul>
                            
                             <li>
@@ -21,9 +22,14 @@
                             <li>
                                 <a target="_blank" href="https://www.google.com/maps/search/?api=1&query=Jenneys+Residency">
                                     <i class="ti-location-pin"></i>
+                                    
                                 </a>
                             </li>   
+                            <li>
+                            </li>
                         </ul>
+                        
+
                     </div>
                 </div>
 
