@@ -85,7 +85,7 @@
                         <div class="col col-md-6 col-12">
                             <div class="couple-item">
                                 <div class="couple-img">
-                                    <img src="{{ asset('assets/images/about/girl.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/about/image.png') }}" alt="">
                                 </div>
                                 <div class="couple-text">
                                     <i><img src="{{ asset('assets/images/couple/bride.svg') }}" alt=""></i>
@@ -109,7 +109,7 @@
                         <div class="col col-md-6 col-12">
                             <div class="couple-item">
                                 <div class="couple-img">
-                                    <img src="{{ asset('assets/images/about/boy.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/about/shiva-img.jpeg') }}" alt="">
                                 </div>
                                 <div class="couple-text">
                                     <i><img src="{{ asset('assets/images/couple/groom.svg') }}" alt=""></i>
