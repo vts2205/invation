@@ -462,42 +462,68 @@
 
 @push('styles')
 <style>
-    /* Intro Screen Styles */
+    /* Intro Screen – responsive full-screen section */
     .intro-screen {
         position: fixed;
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
         width: 100%;
-        height: 100%;
+        min-height: 100vh;
+        min-height: 100dvh;
         z-index: 9999;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
         cursor: pointer;
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+        box-sizing: border-box;
     }
 
     .intro-background {
         position: absolute;
         top: 0;
         left: 0;
+        right: 0;
+        bottom: 0;
         width: 100%;
         height: 100%;
-        background-image: url('{{ asset("assets/images/about/image copy.png") }}');
+        min-height: 100vh;
+        min-height: 100dvh;
+        background-image: url('{{ asset("assets/images/about/intro-invitation.png") }}');
         background-size: cover;
-        background-position: center;
+        background-position: center center;
         background-repeat: no-repeat;
         transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        box-sizing: border-box;
     }
 
-    /* Mobile intro: KP seal + "This Invelation is exclusively for you" image
-    @media (max-width: 767px) {
+    /* Show full invitation (text + flowers) clearly – no cropping (mobile/tablet/portrait) */
+    @media (max-width: 1024px), (orientation: portrait) {
         .intro-background {
-            background-image: url('{{ asset("assets/images/about/image copy 5.png") }}');
             background-size: contain;
-            background-color: #f5f0e8;
+            background-color: #f8f4ed;
+            background-position: center center;
         }
-    } */
+    }
+
+    /* Desktop view: use desktop-optimized invitation image */
+    @media (min-width: 1025px) and (orientation: landscape) {
+        .intro-background {
+            background-image: url('{{ asset("assets/images/about/intro-desktop.png") }}');
+            background-size: cover;
+            background-position: center center;
+        }
+    }
+
+    /* Prefer reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+        .intro-background {
+            transition-duration: 0.6s;
+        }
+    }
 
     .intro-screen.fade-out .intro-background {
         opacity: 0;
