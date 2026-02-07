@@ -1,14 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- Website Intro Screen -->
-    <div id="intro-screen" class="intro-screen">
+    <!-- Website Intro Screen (tap/click anywhere to enter) -->
+    <div id="intro-screen" class="intro-screen" role="button" tabindex="0" aria-label="Tap to enter">
         <div class="intro-background"></div>
-        <div class="intro-content">
-            <button id="enter-button" class="enter-button">
-                <span>Enter</span>
-            </button>
-        </div>
     </div>
 
     <!-- Main Website Content (initially hidden) -->
@@ -479,6 +474,7 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        cursor: pointer;
     }
 
     .intro-background {
@@ -487,7 +483,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('{{ asset("assets/images/slider/img-1.png") }}');
+        background-image: url('{{ asset("assets/images/about/Untitled-2.jpg") }}');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -497,66 +493,6 @@
     .intro-screen.fade-out .intro-background {
         opacity: 0;
         transform: scale(1.15);
-    }
-
-    .intro-content {
-        position: relative;
-        z-index: 10;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .enter-button {
-        background: rgba(255, 255, 255, 0.95);
-        border: 2px solid rgba(255, 255, 255, 0.8);
-        color: #9F7B59;
-        padding: 18px 50px;
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        cursor: pointer;
-        border-radius: 50px;
-        transition: all 0.3s ease;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(10px);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .enter-button::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        border-radius: 50%;
-        background: rgba(159, 123, 89, 0.1);
-        transform: translate(-50%, -50%);
-        transition: width 0.6s ease, height 0.6s ease;
-    }
-
-    .enter-button:hover {
-        background: rgba(255, 255, 255, 1);
-        transform: translateY(-3px);
-        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
-        border-color: rgba(255, 255, 255, 1);
-    }
-
-    .enter-button:hover::before {
-        width: 300px;
-        height: 300px;
-    }
-
-    .enter-button:active {
-        transform: translateY(-1px);
-    }
-
-    .enter-button span {
-        position: relative;
-        z-index: 1;
     }
 
     /* Main Content Styles */
@@ -594,27 +530,31 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const introScreen = document.getElementById('intro-screen');
-        const enterButton = document.getElementById('enter-button');
         const mainContent = document.getElementById('main-content');
         const body = document.body;
 
-        // Add class to body to prevent scrolling
         if (introScreen) {
             body.classList.add('intro-active');
         }
 
-        if (enterButton && introScreen && mainContent) {
-            enterButton.addEventListener('click', function() {
-                // Add fade-out class to intro screen
-                introScreen.classList.add('fade-out');
+        function enterSite() {
+            if (!introScreen || !mainContent || introScreen.classList.contains('fade-out')) return;
+            introScreen.classList.add('fade-out');
+            setTimeout(function() {
+                introScreen.classList.add('hidden');
+                body.classList.remove('intro-active');
+                mainContent.classList.remove('main-content-hidden');
+                mainContent.classList.add('main-content-visible');
+            }, 1200);
+        }
 
-                // After intro animation completes, hide intro and show main content
-                setTimeout(function() {
-                    introScreen.classList.add('hidden');
-                    body.classList.remove('intro-active');
-                    mainContent.classList.remove('main-content-hidden');
-                    mainContent.classList.add('main-content-visible');
-                }, 1200); // Match the CSS transition duration
+        if (introScreen && mainContent) {
+            introScreen.addEventListener('click', enterSite);
+            introScreen.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    enterSite();
+                }
             });
         }
     });
