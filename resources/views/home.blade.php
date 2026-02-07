@@ -25,7 +25,7 @@
                         <div class="col col-xl-6 col-lg-6 col-12">
                             <div class="static-hero-img">
                                 <img class="wow fadeInLeftSlow" data-wow-duration="1500ms"
-                                    src="{{ asset('assets/images/slider/img-1.png') }}" style="width: 100%;" alt="">
+                                    src="{{ asset('assets/images/slider/image.png') }}" style="width: 100%;" alt="">
                                 <div class="hero-img-inner-shape">
                                     <svg viewBox="0 0 550 814" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -145,7 +145,7 @@
                     <div class="row">
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-img">
-                                <img src="{{ asset('assets/images/about/meet.jpg') }}" alt="">
+                                <img src="{{ asset('assets/images/about/image copy 3.png') }}" alt="">
                             </div>
                         </div>
                         <div class="col col-lg-6 col-12">
@@ -172,7 +172,7 @@
                     <div class="row">
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-img">
-                                <img src="{{ asset('assets/images/about/meeting.jpg') }}" alt="">
+                                <img src="{{ asset('assets/images/about/image copy 4.png') }}" alt="">
                             </div>
                         </div>
                         <div class="col col-lg-6 col-12">
@@ -483,12 +483,21 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('{{ asset("assets/images/about/Untitled-2.jpg") }}');
+        background-image: url('{{ asset("assets/images/about/image copy.png") }}');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    /* Mobile intro: KP seal + "This Invelation is exclusively for you" image
+    @media (max-width: 767px) {
+        .intro-background {
+            background-image: url('{{ asset("assets/images/about/image copy 5.png") }}');
+            background-size: contain;
+            background-color: #f5f0e8;
+        }
+    } */
 
     .intro-screen.fade-out .intro-background {
         opacity: 0;
