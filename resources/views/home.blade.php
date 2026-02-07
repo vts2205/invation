@@ -462,6 +462,20 @@
 
 @push('styles')
 <style>
+    /* Ensure full viewport on Android Chrome when intro is active */
+    html.intro-active,
+    body.intro-active {
+        position: fixed;
+        width: 100%;
+        height: 100% !important;
+        min-height: 100vh;
+        min-height: 100dvh;
+        min-height: -webkit-fill-available;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+
     /* Intro Screen – responsive full-screen section */
     .intro-screen {
         position: fixed;
@@ -470,8 +484,10 @@
         right: 0;
         bottom: 0;
         width: 100%;
+        height: 100%;
         min-height: 100vh;
         min-height: 100dvh;
+        min-height: -webkit-fill-available;
         z-index: 9999;
         display: flex;
         align-items: center;
@@ -480,6 +496,7 @@
         cursor: pointer;
         padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
         box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
     }
 
     .intro-background {
@@ -492,18 +509,25 @@
         height: 100%;
         min-height: 100vh;
         min-height: 100dvh;
+        min-height: -webkit-fill-available;
         background-image: url('{{ asset("assets/images/about/intro-invitation.png") }}');
         background-size: cover;
+        -webkit-background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
         transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
         box-sizing: border-box;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
     }
 
     /* Show full invitation (text + flowers) clearly – no cropping (mobile/tablet/portrait) */
     @media (max-width: 1024px), (orientation: portrait) {
         .intro-background {
             background-size: contain;
+            -webkit-background-size: contain;
             background-color: #f8f4ed;
             background-position: center center;
         }
@@ -547,12 +571,6 @@
         display: none;
     }
 
-    /* Prevent scrolling when intro screen is visible */
-    body.intro-active {
-        overflow: hidden;
-        height: 100%;
-    }
-
     /* Smooth transitions */
     * {
         -webkit-font-smoothing: antialiased;
@@ -567,9 +585,11 @@
         const introScreen = document.getElementById('intro-screen');
         const mainContent = document.getElementById('main-content');
         const body = document.body;
+        const html = document.documentElement;
 
         if (introScreen) {
             body.classList.add('intro-active');
+            html.classList.add('intro-active');
         }
 
         function enterSite() {
@@ -578,6 +598,7 @@
             setTimeout(function() {
                 introScreen.classList.add('hidden');
                 body.classList.remove('intro-active');
+                html.classList.remove('intro-active');
                 mainContent.classList.remove('main-content-hidden');
                 mainContent.classList.add('main-content-visible');
             }, 1200);
