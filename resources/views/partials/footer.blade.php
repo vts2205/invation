@@ -10,7 +10,7 @@
                 <div class="col col-xl-6 col-lg-4 col-md-6 col-sm-12 col-12">
                     <div class="widget about-widget">
                         <div class="logo widget-title">
-                            <a class="logo" href="{{ url('/') }}"><img src="{{ asset('assets/images/logo.png') }}" alt=""></a>
+                            <a class="logo" href="{{ url('/') }}"><img src="{{ asset('assets/images/logo-footer.png') }}" alt=""></a>
                         </div>
                         <p>We can’t wait to see all of our beloved friends
                             and relative s at our wedding.</p>
