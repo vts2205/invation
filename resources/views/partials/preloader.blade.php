@@ -5,7 +5,7 @@
             <div class="loader-line-mask">
                 <div class="loader-line"></div>
             </div>
-            <img src="{{ asset('assets/images/preloader.png') }}" alt="">
+            <img src="{{ asset('assets/images/preloader.png') }}" alt="" fetchpriority="high">
         </div>
     </div>
 </div>

@@ -51,8 +51,8 @@
                     </div>
                 </div>
             </div>
-            <div class="bottom-shape wow fadeInUp" data-wow-duration="1400ms">
-                <img src="{{ asset('assets/images/slider/bottom-image.png') }}" alt="">
+                            <div class="bottom-shape wow fadeInUp" data-wow-duration="1400ms">
+                <img src="{{ asset('assets/images/slider/bottom-image.png') }}" loading="lazy" alt="" decoding="async">
             </div>
         </div>
     </section>
@@ -80,10 +80,10 @@
                         <div class="col col-md-6 col-12">
                             <div class="couple-item">
                                 <div class="couple-img">
-                                    <img src="{{ asset('assets/images/about/image.png') }}" loading="lazy" alt="">
+                                    <img src="{{ asset('assets/images/about/image.png') }}" loading="lazy" alt="" decoding="async">
                                 </div>
                                 <div class="couple-text">
-                                    <i><img src="{{ asset('assets/images/couple/bride.svg') }}" alt=""></i>
+                                    <i><img src="{{ asset('assets/images/couple/bride.svg') }}" loading="lazy" alt="" decoding="async"></i>
                                     <h4 class="mt-4">Priyanka</h4>
                                     <p>Priyanka is warm-hearted and cheerful, bringing positivity wherever she goes.
                                          She values love, family, and meaningful relationships, and believes in living 
@@ -104,10 +104,10 @@
                         <div class="col col-md-6 col-12">
                             <div class="couple-item">
                                 <div class="couple-img">
-                                    <img src="{{ asset('assets/images/about/shiva-img.jpeg') }}" loading="lazy" alt="">
+                                    <img src="{{ asset('assets/images/about/shiva-img.jpeg') }}" loading="lazy" alt="" decoding="async">
                                 </div>
                                 <div class="couple-text">
-                                    <i><img src="{{ asset('assets/images/couple/groom.svg') }}" alt=""></i>
+                                    <i><img src="{{ asset('assets/images/couple/groom.svg') }}" loading="lazy" alt="" decoding="async"></i>
                                     <h4>Kandhasivanayagam</h4>
                                     <p>Kandhasivanayagam is calm, responsible, and supportive by nature. 
                                         He believes in trust, commitment, and growing together, making every step of life’s journey meaningful.</p>
@@ -125,8 +125,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shape-1"><img src="{{ asset('assets/images/couple/flower1.png') }}" loading="lazy" alt=""></div>
-                    <div class="shape-2"><img src="{{ asset('assets/images/couple/flower2.png') }}" loading="lazy" alt=""></div>
+                    <div class="shape-1"><img src="{{ asset('assets/images/couple/flower1.png') }}" loading="lazy" alt="" decoding="async"></div>
+                    <div class="shape-2"><img src="{{ asset('assets/images/couple/flower2.png') }}" loading="lazy" alt="" decoding="async"></div>
                 </div>
             </div>
         </div> <!-- end container -->
@@ -145,15 +145,15 @@
                     <div class="row">
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-img">
-                                <img src="{{ asset('assets/images/about/image copy 3.png') }}" loading="lazy" alt="">
+                                <img src="{{ asset('assets/images/about/image copy 3.png') }}" loading="lazy" alt="" decoding="async">
                             </div>
                         </div>
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-content">
                                 <div class="pin">
-                                    <img src="{{ asset('assets/images/story/pin.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/story/pin.svg') }}" loading="lazy" alt="" decoding="async">
                                 </div>
-                                <i><img src="{{ asset('assets/images/story/f-shape-1.png') }}" alt=""></i>
+                                <i><img src="{{ asset('assets/images/story/f-shape-1.png') }}" loading="lazy" alt="" decoding="async"></i>
                                 <h2>First Time We Chat</h2>
                                 <span>28 Dec 2024</span>
                                 <p>The first time we chatted was a simple beginning with a 
@@ -163,7 +163,7 @@
                                     message itself, there was clarity and comfort in 
                                     communication. This moment marks the start of a 
                                     journey built on connection and purpose.</p>
-                                <i><img src="{{ asset('assets/images/story/f-shape-2.png') }}" alt=""></i>
+                                <i><img src="{{ asset('assets/images/story/f-shape-2.png') }}" loading="lazy" alt="" decoding="async"></i>
                             </div>
                         </div>
                     </div>
@@ -172,15 +172,15 @@
                     <div class="row">
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-img">
-                                <img src="{{ asset('assets/images/about/image copy 4.png') }}" loading="lazy" alt="">
+                                <img src="{{ asset('assets/images/about/image copy 4.png') }}" loading="lazy" alt="" decoding="async">
                             </div>
                         </div>
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-content">
                                 <div class="pin">
-                                    <img src="{{ asset('assets/images/story/pin.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/story/pin.svg') }}" loading="lazy" alt="" decoding="async">
                                 </div>
-                                <i><img src="{{ asset('assets/images/story/f-shape-1.png') }}" alt=""></i>
+                                <i><img src="{{ asset('assets/images/story/f-shape-1.png') }}" loading="lazy" alt="" decoding="async"></i>
                                 <h2>Our First Meet</h2>
                                 <span>7 Mar 2025</span>
                                 <p>Our first meeting turned a digital connection into a real-world moment. 
@@ -188,7 +188,7 @@
                                     comfort, and shared excitement. That day helped strengthen the bond we 
                                     had already started and made everything feel more real. It marked an important 
                                     step in our journey together.</p>
-                                <i><img src="{{ asset('assets/images/story/f-shape-2.png') }}" alt=""></i>
+                                <i><img src="{{ asset('assets/images/story/f-shape-2.png') }}" loading="lazy" alt="" decoding="async"></i>
                             </div>
                         </div>
                     </div>
@@ -197,22 +197,22 @@
                     <div class="row">
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-img">
-                                <img src="{{ asset('assets/images/about/function.jpg') }}" alt="">
+                                <img src="{{ asset('assets/images/about/function.jpg') }}" loading="lazy" alt="" decoding="async">
                             </div>
                         </div>
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-content">
                                 <div class="pin">
-                                    <img src="{{ asset('assets/images/story/pin.svg') }}" alt="">
+                                    <img src="{{ asset('assets/images/story/pin.svg') }}" loading="lazy" alt="" decoding="async">
                                 </div>
-                                <i><img src="{{ asset('assets/images/story/f-shape-1.png') }}" alt=""></i>
+                                <i><img src="{{ asset('assets/images/story/f-shape-1.png') }}" loading="lazy" alt="" decoding="async"></i>
                                 <h2>Our First Function</h2>
                                 <span>16 Mar 2025</span>
                                 <p>Our first function together was a joyful and memorable experience. It brought laughter, 
                                     conversations, and shared moments into one beautiful day. Being part of the same 
                                     celebration made our connection stronger and more meaningful. That function marked 
                                     another special step in our journey together.</p>
-                                <i><img src="{{ asset('assets/images/story/f-shape-2.png') }}" alt=""></i>
+                                <i><img src="{{ asset('assets/images/story/f-shape-2.png') }}" loading="lazy" alt="" decoding="async"></i>
                             </div>
                         </div>
                     </div>
@@ -221,12 +221,12 @@
         </div> <!-- end container -->
         <div class="flower-shape-1">
             <div class="flower-sticky">
-                <img src="{{ asset('assets/images/story/shape1.png') }}" loading="lazy" alt="">
+                <img src="{{ asset('assets/images/story/shape1.png') }}" loading="lazy" alt="" decoding="async">
             </div>
         </div>
         <div class="flower-shape-2">
             <div class="flower-sticky">
-                <img src="{{ asset('assets/images/story/shape2.png') }}" loading="lazy" alt="">
+                <img src="{{ asset('assets/images/story/shape2.png') }}" loading="lazy" alt="" decoding="async">
             </div>
         </div>
     </section>
@@ -246,7 +246,7 @@
                             <div class="img-holder">
                                 <a href="{{ asset('assets/images/portfolio/1.jpg') }}" class="fancybox"
                                     data-fancybox-group="gall-1">
-                                    <img src="{{ asset('assets/images/portfolio/1.jpg') }}" alt class="img img-responsive">
+                                    <img src="{{ asset('assets/images/portfolio/1.jpg') }}" loading="lazy" alt class="img img-responsive" decoding="async">
                                     <div class="hover-content">
                                         <i class="ti-plus"></i>
                                     </div>
@@ -262,7 +262,7 @@
                                         <div class="img-holder wow fadeInUp" data-wow-duration="{{ 1000 + ($loop->index * 200) }}ms">
                                             <a href="{{ asset('assets/images/portfolio/' . $i . '.jpg') }}" class="fancybox"
                                                 data-fancybox-group="gall-1">
-                                                <img src="{{ asset('assets/images/portfolio/' . $i . '.jpg') }}" alt class="img img-responsive">
+                                                <img src="{{ asset('assets/images/portfolio/' . $i . '.jpg') }}" loading="lazy" alt class="img img-responsive" decoding="async">
                                                 <div class="hover-content">
                                                     <i class="ti-plus"></i>
                                                 </div>
@@ -278,7 +278,7 @@
                             <div class="img-holder">
                                 <a href="{{ asset('assets/images/portfolio/2.jpg') }}" class="fancybox"
                                     data-fancybox-group="gall-1">
-                                    <img src="{{ asset('assets/images/portfolio/2.jpg') }}" alt class="img img-responsive">
+                                    <img src="{{ asset('assets/images/portfolio/2.jpg') }}" loading="lazy" alt class="img img-responsive" decoding="async">
                                     <div class="hover-content">
                                         <i class="ti-plus"></i>
                                     </div>
@@ -301,7 +301,7 @@
                     <div class="col col-xl-8 col-lg-7 col-md-12 col-12">
                         <div class="contact-img-wrap">
                             <div class="contact-img wow fadeInLeftSlow" data-wow-duration="1700ms">
-                                <img src="{{ asset('assets/images/rsvp/img-1.png') }}" loading="lazy" alt="">
+                                <img src="{{ asset('assets/images/rsvp/img-1.png') }}" loading="lazy" alt="" decoding="async">
                             </div>
                             <div class="back-shape">
                                 <svg viewBox="0 0 693 954" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -340,9 +340,9 @@
                     </div>
                 </div>
                 <div class="shape-1 wow fadeInLeftSlow" data-wow-duration="2000ms"><img
-                        src="{{ asset('assets/images/rsvp/left-shape.png') }}" alt=""></div>
+                        src="{{ asset('assets/images/rsvp/left-shape.png') }}" loading="lazy" alt="" decoding="async"></div>
                 <div class="shape-2 wow fadeInRightSlow" data-wow-duration="2000ms"><img
-                        src="{{ asset('assets/images/rsvp/right-shape.png') }}" alt=""></div>
+                        src="{{ asset('assets/images/rsvp/right-shape.png') }}" loading="lazy" alt="" decoding="async"></div>
             </div>
         </div>
         <div class="bottom-text marquee">
@@ -441,9 +441,9 @@
                         </div>
                         <div class="line"></div>
                     </div>
-                    <div class="shape-1"><img src="{{ asset('assets/images/event/shape-1.png') }}" loading="lazy" alt=""></div>
-                    <div class="shape-2"><img src="{{ asset('assets/images/event/shape-1.png') }}" loading="lazy" alt=""></div>
-                    <div class="shape-3"><img src="{{ asset('assets/images/event/shape-2.png') }}" loading="lazy" alt=""></div>
+                    <div class="shape-1"><img src="{{ asset('assets/images/event/shape-1.png') }}" loading="lazy" alt="" decoding="async"></div>
+                    <div class="shape-2"><img src="{{ asset('assets/images/event/shape-1.png') }}" loading="lazy" alt="" decoding="async"></div>
+                    <div class="shape-3"><img src="{{ asset('assets/images/event/shape-2.png') }}" loading="lazy" alt="" decoding="async"></div>
                 </div>
             </div>
 

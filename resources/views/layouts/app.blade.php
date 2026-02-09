@@ -6,6 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="wpOceans">
+        
+        <!-- Resource Hints for Performance -->
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
         <!-- SEO + Share Meta -->
 <meta property="og:title" content="Kandhasivanayagam ❤️ Priyanka Wedding" />
 <meta property="og:description" content="Join us to celebrate the wedding of Kandhasivanayagam and Priyanka. Save the date and be part of our beautiful journey." />
@@ -26,28 +34,21 @@
         <link rel="preload" as="image" href="{{ asset('assets/images/about/intro-desktop.png') }}" media="(min-width: 1025px) and (orientation: landscape)">
 
         <!-- Critical Styles (load first) -->
-        <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('assets/sass/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" media="all">
+        <link href="{{ asset('assets/sass/style.css') }}" rel="stylesheet" media="all">
         
         <!-- Icon Fonts (load async) -->
         <link href="{{ asset('assets/css/themify-icons.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
         <link href="{{ asset('assets/css/flaticon.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
         
-        <!-- Non-Critical Styles (load async) -->
+        <!-- Non-Critical Styles (load async - only load what's needed) -->
         <link href="{{ asset('assets/css/animate.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
         <link href="{{ asset('assets/css/owl.carousel.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
         <link href="{{ asset('assets/css/owl.theme.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
-        <link href="{{ asset('assets/css/slick.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
-        <link href="{{ asset('assets/css/slick-theme.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
-        <link href="{{ asset('assets/css/swiper.min.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
-        <link href="{{ asset('assets/css/nice-select.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
-        <link href="{{ asset('assets/css/owl.transitions.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
         <link href="{{ asset('assets/css/magnific-popup.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
         <link href="{{ asset('assets/css/jquery.fancybox.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
-        <link href="{{ asset('assets/css/odometer-theme-default.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
-        <link href="{{ asset('assets/css/jquery-ui.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
-        <link href="{{ asset('assets/css/auth-pages.css') }}" rel="stylesheet" media="print" onload="this.media='all'">
+        <!-- Removed unused CSS: slick.css, slick-theme.css, swiper.min.css, nice-select.css, owl.transitions.css, odometer-theme-default.css, jquery-ui.css, auth-pages.css -->
         
         <noscript>
             <link href="{{ asset('assets/css/themify-icons.css') }}" rel="stylesheet">
@@ -56,16 +57,8 @@
             <link href="{{ asset('assets/css/animate.css') }}" rel="stylesheet">
             <link href="{{ asset('assets/css/owl.carousel.css') }}" rel="stylesheet">
             <link href="{{ asset('assets/css/owl.theme.css') }}" rel="stylesheet">
-            <link href="{{ asset('assets/css/slick.css') }}" rel="stylesheet">
-            <link href="{{ asset('assets/css/slick-theme.css') }}" rel="stylesheet">
-            <link href="{{ asset('assets/css/swiper.min.css') }}" rel="stylesheet">
-            <link href="{{ asset('assets/css/nice-select.css') }}" rel="stylesheet">
-            <link href="{{ asset('assets/css/owl.transitions.css') }}" rel="stylesheet">
             <link href="{{ asset('assets/css/magnific-popup.css') }}" rel="stylesheet">
             <link href="{{ asset('assets/css/jquery.fancybox.css') }}" rel="stylesheet">
-            <link href="{{ asset('assets/css/odometer-theme-default.css') }}" rel="stylesheet">
-            <link href="{{ asset('assets/css/jquery-ui.css') }}" rel="stylesheet">
-            <link href="{{ asset('assets/css/auth-pages.css') }}" rel="stylesheet">
         </noscript>
         @stack('styles')
         @isset($css){!! $css !!}@endisset
@@ -83,6 +76,9 @@
         <script src="{{ asset('assets/js/gsap-active.js') }}" defer></script>
         <!-- Custom script for this template -->
         <script src="{{ asset('assets/js/script.js') }}" defer></script>
+        
+        <!-- Performance: Preload critical resources -->
+        <link rel="preload" href="{{ asset('assets/images/slider/image.png') }}" as="image" fetchpriority="high">
         @stack('scripts')
         @isset($script){!! $script !!}@endisset
     </body>
