@@ -45,7 +45,7 @@
         <div class="container">
             <div class="row">
                 <div class="col col-xs-12">
-                    <p class="copyright"> &copy; Copyright 2025 | Graylio | All right
+                    <p class="copyright"> &copy; Copyright 2026 | Graylio | All right
                         reserved.</p>
                 </div>
             </div>
