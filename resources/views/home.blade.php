@@ -25,7 +25,7 @@
                         <div class="col col-xl-6 col-lg-6 col-12">
                             <div class="static-hero-img">
                                 <img class="wow fadeInLeftSlow" data-wow-duration="1500ms"
-                                    src="{{ asset('assets/images/slider/image.png') }}" style="width: 100%;" alt="">
+                                    src="{{ asset('assets/images/slider/image.png') }}" style="width: 100%;" fetchpriority="high" alt="">
                                 <div class="hero-img-inner-shape">
                                     <svg viewBox="0 0 550 814" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -80,7 +80,7 @@
                         <div class="col col-md-6 col-12">
                             <div class="couple-item">
                                 <div class="couple-img">
-                                    <img src="{{ asset('assets/images/about/image.png') }}" alt="">
+                                    <img src="{{ asset('assets/images/about/image.png') }}" loading="lazy" alt="">
                                 </div>
                                 <div class="couple-text">
                                     <i><img src="{{ asset('assets/images/couple/bride.svg') }}" alt=""></i>
@@ -104,7 +104,7 @@
                         <div class="col col-md-6 col-12">
                             <div class="couple-item">
                                 <div class="couple-img">
-                                    <img src="{{ asset('assets/images/about/shiva-img.jpeg') }}" alt="">
+                                    <img src="{{ asset('assets/images/about/shiva-img.jpeg') }}" loading="lazy" alt="">
                                 </div>
                                 <div class="couple-text">
                                     <i><img src="{{ asset('assets/images/couple/groom.svg') }}" alt=""></i>
@@ -125,8 +125,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="shape-1"><img src="{{ asset('assets/images/couple/flower1.png') }}" alt=""></div>
-                    <div class="shape-2"><img src="{{ asset('assets/images/couple/flower2.png') }}" alt=""></div>
+                    <div class="shape-1"><img src="{{ asset('assets/images/couple/flower1.png') }}" loading="lazy" alt=""></div>
+                    <div class="shape-2"><img src="{{ asset('assets/images/couple/flower2.png') }}" loading="lazy" alt=""></div>
                 </div>
             </div>
         </div> <!-- end container -->
@@ -145,7 +145,7 @@
                     <div class="row">
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-img">
-                                <img src="{{ asset('assets/images/about/image copy 3.png') }}" alt="">
+                                <img src="{{ asset('assets/images/about/image copy 3.png') }}" loading="lazy" alt="">
                             </div>
                         </div>
                         <div class="col col-lg-6 col-12">
@@ -172,7 +172,7 @@
                     <div class="row">
                         <div class="col col-lg-6 col-12">
                             <div class="wpo-story-img">
-                                <img src="{{ asset('assets/images/about/image copy 4.png') }}" alt="">
+                                <img src="{{ asset('assets/images/about/image copy 4.png') }}" loading="lazy" alt="">
                             </div>
                         </div>
                         <div class="col col-lg-6 col-12">
@@ -221,12 +221,12 @@
         </div> <!-- end container -->
         <div class="flower-shape-1">
             <div class="flower-sticky">
-                <img src="{{ asset('assets/images/story/shape1.png') }}" alt="">
+                <img src="{{ asset('assets/images/story/shape1.png') }}" loading="lazy" alt="">
             </div>
         </div>
         <div class="flower-shape-2">
             <div class="flower-sticky">
-                <img src="{{ asset('assets/images/story/shape2.png') }}" alt="">
+                <img src="{{ asset('assets/images/story/shape2.png') }}" loading="lazy" alt="">
             </div>
         </div>
     </section>
@@ -301,7 +301,7 @@
                     <div class="col col-xl-8 col-lg-7 col-md-12 col-12">
                         <div class="contact-img-wrap">
                             <div class="contact-img wow fadeInLeftSlow" data-wow-duration="1700ms">
-                                <img src="{{ asset('assets/images/rsvp/img-1.png') }}" alt="">
+                                <img src="{{ asset('assets/images/rsvp/img-1.png') }}" loading="lazy" alt="">
                             </div>
                             <div class="back-shape">
                                 <svg viewBox="0 0 693 954" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -441,9 +441,9 @@
                         </div>
                         <div class="line"></div>
                     </div>
-                    <div class="shape-1"><img src="{{ asset('assets/images/event/shape-1.png') }}" alt=""></div>
-                    <div class="shape-2"><img src="{{ asset('assets/images/event/shape-1.png') }}" alt=""></div>
-                    <div class="shape-3"><img src="{{ asset('assets/images/event/shape-2.png') }}" alt=""></div>
+                    <div class="shape-1"><img src="{{ asset('assets/images/event/shape-1.png') }}" loading="lazy" alt=""></div>
+                    <div class="shape-2"><img src="{{ asset('assets/images/event/shape-1.png') }}" loading="lazy" alt=""></div>
+                    <div class="shape-3"><img src="{{ asset('assets/images/event/shape-2.png') }}" loading="lazy" alt=""></div>
                 </div>
             </div>
 
@@ -521,6 +521,7 @@
         -webkit-transform: translateZ(0);
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
+        will-change: opacity, transform;
     }
 
     /* Show full invitation (text + flowers) clearly – no cropping (mobile/tablet/portrait) */
