@@ -40,10 +40,11 @@
                                     <h2 class="poort-text poort-in-up">Shiva <br>&<br> Priya</h2>
                                 </div>
                                 <div class="slide-text wow fadeInUp" data-wow-duration="1600ms">
-                                    <p>We Are Getting Married In </p>
+                                    <p>Friday 06, March. 2026, 6.00 AM – 7.00 AM</p>
+                                    <p class="venue-text">Venue: Jenneys Residency, Avinashi Road, Coimbatore</p>
                                 </div>
                                 <div class="slide-date wow fadeInUp" data-wow-duration="1700ms">
-                                    <p>06 . 03 . 2026</p>
+                                    <p>We can't wait to see all of our beloved friends and relatives at our wedding.</p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>

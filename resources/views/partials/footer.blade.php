@@ -12,8 +12,7 @@
                         <div class="logo widget-title">
                             <a class="logo" href="{{ url('/') }}"><img src="{{ asset('assets/images/logo-01.png') }}" alt=""></a>
                         </div>
-                        <p>We can’t wait to see all of our beloved friends
-                            and relative s at our wedding.</p>
+                        <p>We can’t wait to see all of our beloved friends and relatives at our wedding.</p>
                             <h3 style="margin-top: 20px;">Celebrate With Us Here</h3>
                         <ul>
                            
