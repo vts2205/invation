@@ -511,7 +511,7 @@
         min-height: 100vh;
         min-height: 100dvh;
         min-height: -webkit-fill-available;
-        background-image: url('{{ asset("assets/images/about/intro-invitation.png") }}');
+        background-image: url('{{ asset("assets/images/about/image copy 7.png") }}');
         background-size: cover;
         -webkit-background-size: cover;
         background-position: center center;
@@ -538,7 +538,7 @@
     /* Desktop view: use desktop-optimized invitation image */
     @media (min-width: 1025px) and (orientation: landscape) {
         .intro-background {
-            background-image: url('{{ asset("assets/images/about/intro-desktop.png") }}');
+            background-image: url('{{ asset("assets/images/about/image copy 6.png") }}');
             background-size: cover;
             background-position: center center;
         }
