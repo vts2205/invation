@@ -511,7 +511,7 @@
         min-height: 100vh;
         min-height: 100dvh;
         min-height: -webkit-fill-available;
-        background-image: url('{{ asset("assets/images/about/image copy 7.png") }}');
+        background-image: url('{{ asset("assets/images/about/image copy 8.png") }}');
         background-size: cover;
         -webkit-background-size: cover;
         background-position: center center;
