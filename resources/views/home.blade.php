@@ -619,6 +619,8 @@
             z-index: 9999;
             visibility: visible !important;
             opacity: 1 !important;
+            margin-bottom: 70px;
+            margin-right: 60px;
         }
     }
 
