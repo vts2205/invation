@@ -318,7 +318,7 @@
     function preloader() {
         const $preloader = $(".preloader");
         if ($preloader.length) {
-            $preloader.delay(100).fadeOut(500, function () {
+            $preloader.delay(50).fadeOut(300, function () {
                 wow.init();
             });
         }

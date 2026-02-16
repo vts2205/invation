@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <!-- Website Intro Screen (tap/click anywhere to enter) -->
+    <!-- Website Intro Screen -->
     <div id="intro-screen" class="intro-screen" role="button" tabindex="0" aria-label="Tap to enter">
         <div class="intro-background"></div>
+        <div class="intro-overlay">
+            <button type="button" id="intro-enter-btn" class="intro-enter-btn">Click me</button>
+        </div>
     </div>
 
     <!-- Main Website Content (initially hidden) -->
@@ -506,12 +509,13 @@
         left: 0;
         right: 0;
         bottom: 0;
+        z-index: 0;
         width: 100%;
         height: 100%;
         min-height: 100vh;
         min-height: 100dvh;
         min-height: -webkit-fill-available;
-        background-image: url('{{ asset("assets/images/about/image copy 8.png") }}');
+        background-image: url('{{ asset("assets/images/about/intro-kp-invitation.png") }}');
         background-size: cover;
         -webkit-background-size: cover;
         background-position: center center;
@@ -554,6 +558,68 @@
     .intro-screen.fade-out .intro-background {
         opacity: 0;
         transform: scale(1.15);
+    }
+
+    /* Intro button overlay – bottom right (all breakpoints, always on top) */
+    .intro-overlay {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        width: 100%;
+        min-height: 90px;
+        padding: 0 calc(12px + env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) 0;
+        pointer-events: none;
+    }
+    .intro-overlay * { pointer-events: auto; }
+    .intro-enter-btn {
+        position: relative;
+        z-index: 11;
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        min-height: 70px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 0.7rem;
+        font-weight: 500;
+        line-height: 1.15;
+        color: #fff;
+        text-align: center;
+        background: linear-gradient(135deg, #9c7b4a 0%, #c9a86c 100%);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(156,123,74,0.4);
+        transition: transform 0.2s, box-shadow 0.2s;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-appearance: none;
+        appearance: none;
+        touch-action: manipulation;
+    }
+    .intro-enter-btn:hover, .intro-enter-btn:focus {
+        transform: translateY(-2px) scale(1.05);
+        box-shadow: 0 6px 20px rgba(156,123,74,0.5);
+    }
+
+    /* Force intro button visible on mobile (avoids clipping/hiding) */
+    @media (max-width: 768px) {
+        .intro-overlay {
+            z-index: 9998;
+            min-height: 100px;
+        }
+        .intro-enter-btn {
+            z-index: 9999;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
     }
 
     /* Main Content Styles */
@@ -606,6 +672,8 @@
             }, 1200);
         }
 
+        var enterBtn = document.getElementById('intro-enter-btn');
+        if (enterBtn) enterBtn.addEventListener('click', function(e) { e.stopPropagation(); enterSite(); });
         if (introScreen && mainContent) {
             introScreen.addEventListener('click', enterSite);
             introScreen.addEventListener('keydown', function(e) {

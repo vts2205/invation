@@ -30,8 +30,8 @@
         <title>@yield('title', 'Kandhasivanayagam ❤️ Priyanka Wedding')</title>
         
         <!-- Preload critical intro image -->
-        <link rel="preload" as="image" href="{{ asset('assets/images/about/intro-invitation.png') }}" media="(max-width: 1024px), (orientation: portrait)">
-        <link rel="preload" as="image" href="{{ asset('assets/images/about/intro-desktop.png') }}" media="(min-width: 1025px) and (orientation: landscape)">
+        <link rel="preload" as="image" href="{{ asset('assets/images/about/intro-kp-invitation.png') }}">
+        <link rel="preload" as="image" href="{{ asset('assets/images/slider/image.png') }}">
 
         <!-- Critical Styles (load first) -->
         <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" media="all">
@@ -66,8 +66,8 @@
     <body>
         @yield('content')
 
-        <!-- Critical JavaScript (load first) -->
-        <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+        <!-- Critical JavaScript (defer = non-blocking, executes in order) -->
+        <script src="{{ asset('assets/js/jquery.min.js') }}" defer></script>
         <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}" defer></script>
         
         <!-- Non-Critical JavaScript (load async/defer) -->
@@ -77,8 +77,6 @@
         <!-- Custom script for this template -->
         <script src="{{ asset('assets/js/script.js') }}" defer></script>
         
-        <!-- Performance: Preload critical resources -->
-        <link rel="preload" href="{{ asset('assets/images/slider/image.png') }}" as="image" fetchpriority="high">
         @stack('scripts')
         @isset($script){!! $script !!}@endisset
     </body>
