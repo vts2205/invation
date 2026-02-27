@@ -370,33 +370,34 @@
                 <div class="wpo-event-wrap">
                     <h3 class="text-center font-bold" style="margin-bottom: 50px;margin-left: 50px; ">05/03/2026</h3>
                     <div class="wpo-event-inner">
-                        <div class="wpo-event-item">
-                            <div class="wpo-event-text">
-                                <i><img src="{{ asset('assets/images/icon/1.svg') }}" alt=""></i>
-                                <span>Welcome Drinks</span>
-                            </div>
-                            <div class="wpo-event-time">
-                                <h4>6.00 PM</h4>
-                                <i class="fa fa-heart"></i>
-                            </div>
-                        </div>
+                      
                         <div class="wpo-event-item">
                             <div class="wpo-event-text">
                                 <i><img src="{{ asset('assets/images/icon/3.svg') }}" alt=""></i>
                                 <span>Pre Wedding Photos</span>
                             </div>
                             <div class="wpo-event-time">
-                                <h4>6.30 PM</h4>
+                                <h4>4.00 - 6.00 PM</h4>
+                                <i class="fa fa-heart"></i>
+                            </div>
+                        </div>
+                          <div class="wpo-event-item">
+                            <div class="wpo-event-text">
+                                <i><img src="{{ asset('assets/images/icon/engment.png') }}" alt="" style="width:100px;"></i>
+                                <span>Engagement</span>
+                            </div>
+                            <div class="wpo-event-time">
+                                <h4>6.00 - 7.00 PM</h4>
                                 <i class="fa fa-heart"></i>
                             </div>
                         </div>
                          <div class="wpo-event-item">
                             <div class="wpo-event-text">
-                                <i><img src="{{ asset('assets/images/icon/4.svg') }}" alt=""></i>
-                                <span>Dinner</span>
+                                <i><img src="{{ asset('assets/images/icon/image copy.png') }}" style="width:100px;" alt=""></i>
+                                <span>Urumalai Kattu Seer</span>
                             </div>
                             <div class="wpo-event-time">
-                                <h4>7.00 PM</h4>
+                                <h4>7.00 - 9.00 PM</h4>
                                 <i class="fa fa-heart"></i>
                             </div>
                         </div>
